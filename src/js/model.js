@@ -6,14 +6,14 @@ export const state = {
     query: '',
     results: [],
     resultsPerPage: RES_PER_PAGE,
-    page: 1,
+    page: 4,
   },
 };
 
 export const loadRecipe = async function (id) {
   try {
     const data = await getJSON(`${API_URL}${id}`);
-    console.log(data);
+    // console.log(data);
     const { recipe } = data.data;
     state.recipe = {
       id: recipe.id,
