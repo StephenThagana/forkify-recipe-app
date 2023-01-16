@@ -71,12 +71,17 @@ export const updateServings = function (newServings) {
   });
 };
 
+const persistsBookmarks = function () {
+  localStorage.setItem('bookmarks', JSON.stringify(state.bookmarks));
+};
+
 export const addBookmark = function (recipe) {
   // add bookmark
   state.bookmarks.push(recipe);
 
   // mark current bokmark as recipe
   if (recipe.id === state.recipe.id) state.recipe.bookmarked = true;
+  persistsBookmarks();
 };
 
 export const deleteBookmark = function (id) {
@@ -85,4 +90,10 @@ export const deleteBookmark = function (id) {
 
   // delete current bokmark as recipe
   if (id === state.recipe.id) state.recipe.bookmarked = false;
+  persistsBookmarks();
 };
+const init = function () {
+  const storage = localStorage.getItem('bookmarks');
+  if (storage) state.bookmarks = JSON.parse(storage);
+};
+init();
