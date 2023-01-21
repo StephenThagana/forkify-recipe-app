@@ -1,7 +1,7 @@
 import * as model from './model.js';
 import recipeView from './views/recipeViews.js';
 import searchView from './views/searchView.js';
-// import resultsView from './views/resultsView.js';
+import resultsView from './views/resultsView.js';
 import paginationView from './views/paginationView.js';
 import bookmarksView from './views/bookmarksView.js';
 import addRecipeView from './views/addRecipeView.js';
@@ -83,6 +83,16 @@ const controlBookmarks = function () {
   bookmarksView.render(model.state.bookmarks);
 };
 
+const controlAddRecipe = async function (newRecipe) {
+  try {
+    // upload recipe
+    await model.uploadRecipe(newRecipe);
+  } catch (err) {
+    console.log('🔥🔥', err);
+    addRecipeView.renderError(err.message);
+  }
+};
+
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipes);
@@ -90,5 +100,6 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   recipeView.addHandlerAddBookmark(controlAddBookmark);
+  addRecipeView.addHandlerUpload(controlAddRecipe);
 };
 init();
