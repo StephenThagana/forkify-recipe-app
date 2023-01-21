@@ -9,21 +9,21 @@ Thanks for checking out.
 ## Your users should be able to:
 
 - Search for a recipe and result displayed
-- Bookmark a recipe to and view the bookmarks even after page reloads
-- Use pagination buttons to dispaly search results
+- Bookmark a recipe and view the bookmarked recipe even after page reloads
+- Use pagination buttons to display search results
 - change the number of servings and get quantity of ingredients required in relation to servings
 
-## can i see the live site?
+## Can i see the live site?
 
 A: Sure! Here you go [Forkify app link](https://recipe.netlify.app)
 
 ## Author
 
-created by Stephen Thagana
+Created by Stephen Thagana
 
 website:
 [stephen thagana website](https://stephen-thagana.netlify.app)
 
-## credit
+## Credit
 
 Jonas schmedtmann - Udemy instructor

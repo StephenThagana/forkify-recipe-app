@@ -1,5 +1,5 @@
 import view from './view.js';
-import previewView from './PreviewView.js';
+import previewView from './previewView.js';
 
 import icons from 'url:../../img/icons.svg'; //parcel 2
 
