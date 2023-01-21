@@ -15,7 +15,7 @@ Thanks for checking out.
 
 ## Can i see the live site?
 
-A: Sure! Here you go [Forkify app link](https://recipe.netlify.app)
+A: Sure! Here you go [Forkify app link](https://tasty-dish.netlify.app)
 
 ## Author
 
