@@ -2,7 +2,7 @@
 
 ![Forkify app to search recipes](./src/img/forkify-design.png)
 
-## Welcome! 👋👋👋
+## Welcome! 👋👋👋👋
 
 Thanks for checking out.
 
